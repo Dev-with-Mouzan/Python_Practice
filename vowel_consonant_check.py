@@ -1,13 +1,10 @@
-def check_vowel_consonant(char):
-    if len(char) != 1 or not char.isalpha():
-        return "Invalid input. Please enter a single letter."
-    
-    char = char.lower()
-    if char in 'aeiou':
-        return "Vowel"
+character=input("Enter your Sentence: ").lower()
+vowel_count=0
+consonant_count=0
+for ch in character:
+    if ch in "aeiou":
+        vowel_count+=1
     else:
-        return "Consonant"
-
-if __name__ == "__main__":
-    char = input("Enter a character: ")
-    print(f"The character '{char}' is a {check_vowel_consonant(char)}.")
+        consonant_count+=1
+print(f"Vowels: {vowel_count}")
+print(f"Consonants: {consonant_count}")
